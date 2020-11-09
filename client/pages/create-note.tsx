@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { INote } from '../src/interfaces/Note';
-import { serverUrl } from '../src/utils/constants';
+import { getServerUrl } from '../src/utils/constants';
 
 const CreateNote = () =>
 {
@@ -14,8 +14,7 @@ const CreateNote = () =>
 
     const createNote = async ( data: INote ) =>
     {
-        console.log( serverUrl );
-        const res = await Axios.post( `${ serverUrl }/api/note`, data, {
+        const res = await Axios.post( `${ getServerUrl() }/api/notes`, data, {
             headers: {
                 'Content-Type': 'application/json'
             }

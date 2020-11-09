@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { serverUrl } from "../src/utils/constants";
+import { getServerUrl } from "../src/utils/constants";
 
 
 const index = ( { notes } ) =>
@@ -18,7 +18,7 @@ export const getServerSideProps = async () =>
 {
   try
   {
-    const res = await Axios.get( `${ serverUrl }/api/notes` );
+    const res = await Axios.get( `${ getServerUrl() }/api/notes` );
     return { props: { notes: res.data } };
   } catch ( err )
   {
