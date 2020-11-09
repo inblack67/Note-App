@@ -1,0 +1,28 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Notes Sharing Web App",
+  "main": "index.js",
+  "author": "Aman Bhardwaj",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js",
+    "build": "tsc",
+    "build:watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/mongoose": "^5.7.37",
+    "@types/node": "^14.14.6",
+    "nodemon": "^2.0.6",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13"
+  }
+}
