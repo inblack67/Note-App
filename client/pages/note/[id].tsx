@@ -7,6 +7,7 @@ const SingleNote = ( { note } ) =>
 {
     return (
         <div className="container">
+            <p className="flow-text center">Single Note</p>
             {note ? <NoteItem note={ note } /> : null }
         </div>
     );
