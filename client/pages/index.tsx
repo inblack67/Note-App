@@ -1,4 +1,6 @@
 import Axios from "axios";
+import Link from "next/link";
+import { Fragment } from "react";
 import NoteItem from "../components/NoteItem";
 import { INote } from "../src/interfaces/Note";
 import { getServerUrl } from "../src/utils/constants";
@@ -11,8 +13,20 @@ const index = ( { notes }: IndexPropsType ) =>
 {
   return (
     <div className='container'>
-      <p className="flow-text center">Notes</p>
-      {notes.length > 0 ? notes.map( ( note ) => <NoteItem key={ note._id } note={ note } /> ) : null }
+
+      {notes.length > 0 ? <Fragment>
+        <p className="flow-text center">Notes</p>
+        {
+          notes.map( ( note ) => <NoteItem key={ note._id } note={ note } /> )
+        }
+      </Fragment> : <div className='center'>
+          <p className="flow-text center">No notes yet.</p>
+          <Link href='/create-note'>
+            <a className='btn black'>
+              Create Note
+          </a>
+          </Link>
+        </div> }
     </div>
   );
 };
