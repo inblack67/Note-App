@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "moment": "^2.29.1",
     "next": "10.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-hook-form": "^6.11.0"
+    "react-hook-form": "^6.11.0",
+    "react-moment": "^1.0.0"
   },
   "devDependencies": {
     "@types/materialize-css": "^1.0.8",

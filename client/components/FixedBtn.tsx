@@ -6,7 +6,7 @@ const FixedBtn = () =>
         <div>
             <div className='fixed-action-btn'>
                 <Link href='/create-note'>
-                    <a className='btn-floating blue pulse'>
+                    <a className='btn-floating black'>
                         <i className='large material-icons'>add</i>
                     </a>
                 </Link>

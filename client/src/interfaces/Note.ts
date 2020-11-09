@@ -1,5 +1,7 @@
 export interface INote
 {
-    title: String;
-    description: String;
+    title: string;
+    description: string;
+    _id?: string;
+    createdAt?: string;
 }
