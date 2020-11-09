@@ -17,7 +17,13 @@
     - Materialize
 
 ## Run Code
+
 - Run following command in the root directory itself.
+
+```sh
+yarn installs
+```
+- This will install all the dependencies of both, the client and the server
 
 ```sh
 yarn build

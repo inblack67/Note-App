@@ -11,6 +11,7 @@
     "server": "nodemon dist/index.js",
     "build": "tsc",
     "build:watch": "tsc -w",
+    "installs": "concurrently \"yarn install\" \"yarn --cwd client install\"",
     "launch": "concurrently \"yarn server\" \"yarn --cwd client dev\""
   },
   "devDependencies": {
