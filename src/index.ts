@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { config } from 'dotenv';
 import { connectDB } from './utils/connectDB';
 import notesRoute from './routes/notes';
@@ -13,6 +13,11 @@ const main = async () =>
 
     const app = express();
     app.use( express.json() );
+
+    app.get( '/', ( _: Request, res: Response ) =>
+    {
+        res.send( 'API up and running' );
+    } );
 
     app.use( cors() );
 
