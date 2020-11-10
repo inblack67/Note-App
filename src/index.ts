@@ -5,6 +5,7 @@ import notesRoute from './routes/notes';
 import cors from 'cors';
 import 'colors';
 import errorHandler from './middlewares/errorHandler';
+import { getClientURL } from './utils/constants';
 
 const main = async () =>
 {
@@ -20,7 +21,10 @@ const main = async () =>
         res.send( 'API up and running' );
     } );
 
-    app.use( cors() );
+    app.use( cors( {
+        origin: getClientURL(),
+        optionsSuccessStatus: 200
+    } ) );
 
     app.use( '/api/notes', notesRoute );
 
