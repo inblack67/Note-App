@@ -4,6 +4,7 @@ import { connectDB } from './utils/connectDB';
 import notesRoute from './routes/notes';
 import cors from 'cors';
 import 'colors';
+import errorHandler from './middlewares/errorHandler';
 
 const main = async () =>
 {
@@ -22,6 +23,8 @@ const main = async () =>
     app.use( cors() );
 
     app.use( '/api/notes', notesRoute );
+
+    app.use( errorHandler );
 
     const PORT = process.env.PORT || 5000;
     app.listen( PORT, () =>
