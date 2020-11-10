@@ -10,6 +10,7 @@
 - Tech Stack
     - Node.js
     - Express
+    - REST
     - MongoDB
     - React.js
     - Next.js/SSR
@@ -18,7 +19,7 @@
 
 ## Run Code
 
-- Run following command in the root directory itself.
+- Run following commands in the root directory itself.
 
 ```sh
 yarn installs
@@ -28,10 +29,10 @@ yarn installs
 ```sh
 yarn build
 ```
-- Build command will build all the TypeScript code to JavaScript
+- Build command will convert all the TypeScript code to JavaScript
 
 ```
 yarn launch
 ```
-- Launch command will start the server on port 5000 and the client on 3000
-- Go to port 3000 in the browser to explore the app.
+- Launch command will start the server on localhost:5000 and the client on localhost:3000
+- Go to localhost:3000 in the browser to explore the app.
