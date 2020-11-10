@@ -28,6 +28,14 @@ const CreateNote = () =>
         } catch ( err )
         {
             console.error( err );
+            if ( err.response !== undefined )
+            {
+                M.toast( { html: err.response.data.error } );
+            }
+            else
+            {
+                M.toast( { html: 'Something went wrong' } );
+            }
         }
     };
 

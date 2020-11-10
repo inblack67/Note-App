@@ -15,7 +15,8 @@ const index = ( { notes }: IndexPropsType ) =>
     <div className='container'>
 
       {notes.length > 0 ? <Fragment>
-        <p className="flow-text center">Notes</p>
+        <p className="flow-text center">Notes: <span className="red-text">
+          { notes.length }</span></p>
         {
           notes.map( ( note ) => <NoteItem key={ note._id } note={ note } /> )
         }
