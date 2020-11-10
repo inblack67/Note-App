@@ -10,7 +10,7 @@ const CreateNote = () =>
     const { handleSubmit, register } = useForm<INote>( {
         defaultValues: {
             title: 'Some Title',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt quod voluptas placeat sed. Ipsa exercitationem corporis dolor modi iusto.'
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt.'
         }
     } );
 
@@ -37,7 +37,7 @@ const CreateNote = () =>
                 <div className="input-field">
                     <input type="text" name='title' ref={ register( {
                         required: true
-                    } ) } />
+                    } ) } required maxLength={ 20 } minLength={ 5 } />
                     <span className="helper-text">
                         Title
                     </span>
@@ -45,7 +45,7 @@ const CreateNote = () =>
                 <div className="input-field">
                     <input type="text" name='description' ref={ register( {
                         required: true
-                    } ) } />
+                    } ) } required maxLength={ 500 } minLength={ 10 } />
                     <span className="helper-text">Description</span>
                 </div>
                 <div className="input-field">

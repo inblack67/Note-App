@@ -4,7 +4,7 @@ import { connectDB } from './utils/connectDB';
 import notesRoute from './routes/notes';
 import cors from 'cors';
 import 'colors';
-import errorHandler from './middlewares/errorHandler';
+import { errorHandler } from './middlewares/errorHandler';
 import { getClientURL } from './utils/constants';
 
 const main = async () =>
